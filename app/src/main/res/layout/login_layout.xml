@@ -5,14 +5,26 @@
     android:layout_height="match_parent">
 
     <EditText
+        android:id="@+id/edit_text_user_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Usuário" />
+        android:hint="Usuário"
+        android:layout_margin="@dimen/margin_16"/>
 
     <EditText
+        android:layout_margin="@dimen/margin_16"
+        android:id="@+id/edit_text_user_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Senha"/>
+
+    <Button
+        android:layout_margin="@dimen/margin_16"
+        android:id="@+id/button_user_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Entrar"
+        android:layout_gravity="center"/>
 
 
 </LinearLayout>
