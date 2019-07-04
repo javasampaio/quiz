@@ -18,6 +18,7 @@ implements LoginView, View.OnClickListener {
 
     @Override
     protected LoginPresenter getPresenter() {
+
         return new LoginPresenterImpl(this);
     }
 
