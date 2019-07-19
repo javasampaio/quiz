@@ -4,6 +4,7 @@ import android.widget.EditText;
 
 import androidx.annotation.IdRes;
 import androidx.annotation.NonNull;
+import androidx.annotation.StringRes;
 
 import br.com.treinamento.quiz.QuizApplication;
 import br.com.treinamento.quiz.shared.presenter.BasePresenter;
@@ -24,12 +25,12 @@ public abstract class BasePresenterImpl<V extends BaseView>
     }
 
     @Override
-    public void setError(@NonNull EditText editText,@IdRes int message) {
+    public void setError(@NonNull EditText editText, @StringRes int message) {
         editText.setError(QuizApplication.getInstance().getString(message));
     }
 
     @Override
     public void cleanError(@NonNull EditText editText) {
-
+        editText.setError(null);
     }
 }

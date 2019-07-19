@@ -11,6 +11,7 @@ import br.com.treinamento.quiz.QuizApplication;
 import br.com.treinamento.quiz.R;
 import br.com.treinamento.quiz.shared.presenter.LoginPresenter;
 import br.com.treinamento.quiz.shared.view.LoginView;
+import br.com.treinamento.quiz.viewImpl.RegisterViewImpl;
 
 public class LoginPresenterImpl extends BasePresenterImpl<LoginView>
  implements LoginPresenter {
@@ -31,6 +32,9 @@ public class LoginPresenterImpl extends BasePresenterImpl<LoginView>
         ((Context) view).startActivity(nextView);
     }
 
-
-
+    @Override
+    public void register() {
+        Intent registeView = new Intent(QuizApplication.getInstance(), RegisterViewImpl.class);
+        QuizApplication.getInstance().startActivity(registeView);
+    }
 }

@@ -15,6 +15,7 @@ implements LoginView, View.OnClickListener {
     private EditText editTextUsername;
     private EditText editTextPassword;
     private Button buttonLogin;
+    private Button buttonRegister;
 
     @Override
     protected LoginPresenter getPresenter() {
@@ -28,6 +29,9 @@ implements LoginView, View.OnClickListener {
         editTextPassword = findViewById(R.id.edit_text_user_password);
         buttonLogin = findViewById(R.id.button_user_sign);
         buttonLogin.setOnClickListener(this);
+
+        buttonRegister = findViewById(R.id.button_user_register);
+        buttonRegister.setOnClickListener(this);
     }
 
     @Override
@@ -37,9 +41,16 @@ implements LoginView, View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        if(view.getId() == R.id.button_user_sign){
-            presenter.doLogin(editTextUsername.getText().toString(),
-                    editTextPassword.getText().toString());
+
+        switch (view.getId()){
+            case R.id.button_user_register:
+                presenter.register();
+                break;
+
+            case R.id.button_user_sign:
+                presenter.doLogin(editTextUsername.getText().toString(),
+                        editTextPassword.getText().toString());
+                break;
         }
     }
 }

@@ -5,4 +5,7 @@
     <string name="username">Nome</string>
     <string name="email">E-mail</string>
     <string name="password">Senha</string>
+    <string name="error_username">Preencha o nome do usuário</string>
+    <string name="error_email">Preencha o e-mail</string>
+    <string name="error_password">Preencha a senha</string>
 </resources>
