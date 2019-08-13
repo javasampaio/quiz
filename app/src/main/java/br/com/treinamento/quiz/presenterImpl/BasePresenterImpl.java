@@ -2,7 +2,6 @@ package br.com.treinamento.quiz.presenterImpl;
 
 import android.widget.EditText;
 
-import androidx.annotation.IdRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 
@@ -11,7 +10,7 @@ import br.com.treinamento.quiz.shared.presenter.BasePresenter;
 import br.com.treinamento.quiz.shared.view.BaseView;
 
 public abstract class BasePresenterImpl<V extends BaseView>
- implements BasePresenter {
+        implements BasePresenter {
 
     protected V view;
 

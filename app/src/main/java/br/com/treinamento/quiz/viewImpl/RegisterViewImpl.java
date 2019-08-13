@@ -36,6 +36,7 @@ public class RegisterViewImpl extends
 
     @Override
     protected int getLayoutView() {
+
         return R.layout.register_layout;
     }
 
