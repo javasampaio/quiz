@@ -34,5 +34,13 @@
         android:layout_gravity="center"
         android:text="Cadastrar"/>
 
+    <Button
+        android:id="@+id/button_atividade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Atividade"
+        android:layout_margin="@dimen/margin_16"
+        android:layout_gravity="center"/>
+
 
 </LinearLayout>

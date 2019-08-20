@@ -16,6 +16,7 @@ implements LoginView, View.OnClickListener {
     private EditText editTextPassword;
     private Button buttonLogin;
     private Button buttonRegister;
+    private Button buttonAtividade;
 
     @Override
     protected LoginPresenter getPresenter() {
@@ -32,6 +33,9 @@ implements LoginView, View.OnClickListener {
 
         buttonRegister = findViewById(R.id.button_user_register);
         buttonRegister.setOnClickListener(this);
+
+        buttonAtividade = findViewById(R.id.button_atividade);
+        buttonAtividade.setOnClickListener(this);
     }
 
     @Override
@@ -50,6 +54,10 @@ implements LoginView, View.OnClickListener {
             case R.id.button_user_sign:
                 presenter.doLogin(editTextUsername.getText().toString(),
                         editTextPassword.getText().toString());
+                break;
+
+            case R.id.button_atividade:
+                presenter.openAtividade();
                 break;
         }
     }

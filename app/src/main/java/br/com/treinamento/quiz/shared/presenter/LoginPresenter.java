@@ -4,4 +4,7 @@ public interface LoginPresenter extends BasePresenter {
     void doLogin(String username, String password);
 
     void register();
+
+    void openAtividade();
+
 }

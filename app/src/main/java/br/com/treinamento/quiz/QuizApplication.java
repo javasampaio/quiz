@@ -17,4 +17,10 @@ public class QuizApplication extends Application {
     public static QuizApplication getInstance(){
         return quizApplication;
     }
+
+    @Override
+    public void onTerminate() {
+        super.onTerminate();
+        AppDatabase.destroyDatabase();
+    }
 }
